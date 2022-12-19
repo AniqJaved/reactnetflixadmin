@@ -33,18 +33,18 @@ export default function Home() {
         {
           headers: {
             token:
-            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDNmYWRmMDNlYTEzMWY4OWFmYThiOCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY2NzkzMDQ3NywiZXhwIjoxNjY4MzYyNDc3fQ.GwaPkwsBIdxbunULrPTdC5PFO5ucyhgqHPBNGkdPMWA"
+            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDNmYWRmMDNlYTEzMWY4OWFmYThiOCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MTQ4MjQ0MCwiZXhwIjoxNjcxOTE0NDQwfQ.n_7kjlx5JohVTmkgqzOUerOzZqMn5v64Kllm9XbetlM"
           }
         }
         )
         //Funtion to sort the months so that we are getting all the months in asceding order. id here represent the month number.
         const statsList = res.data.sort(function (a,b){
-          return a._id - b._id
+          return a._id - b._id                   //The _id in the res.data is bascially the number of month, like for june it is 6.
         });
 
         //Making an array of objects which contains the name of the month and the user count. This format is used used because Chart library accepts that.
         statsList.map((item)=> setUserStats((prev)=>[
-          ...prev,
+          ...prev,                                     //Bascially prev is adding all the previous arrays that were already in the userStats array and then appending a new object to it.
           {name: MONTHS[item._id - 1 ], "New User": item.total },  
         ])
         )
