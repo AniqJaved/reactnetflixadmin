@@ -13,9 +13,9 @@ export const AuthContext = createContext(INITIAL_STATE);
 
 export const AuthContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(AuthReducer, INITIAL_STATE); //useReducer is used to store the state of the user. The AuthReducer is the function which will check the state, INITIAL_STATE is used to store the user initial state. The result is store in "state"
-
+                                                                      //dispatch is bascially a function just like in case of useState, this function allows us to update the state variable.
     useEffect(() =>{
-        localStorage.setItem("user", JSON.stringify(state.user));
+        localStorage.setItem("user", JSON.stringify(state.user));  //Here we are storing user state information, in a dictionary with a key user.
     }, [state.user]);
 
     return ( 

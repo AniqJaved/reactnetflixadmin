@@ -33,7 +33,7 @@ export default function Home() {
         {
           headers: {
             token:
-            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDNmYWRmMDNlYTEzMWY4OWFmYThiOCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MTQ4MjQ0MCwiZXhwIjoxNjcxOTE0NDQwfQ.n_7kjlx5JohVTmkgqzOUerOzZqMn5v64Kllm9XbetlM"
+            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDNmYWRmMDNlYTEzMWY4OWFmYThiOCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MjQ5MzE4MywiZXhwIjoxNjcyOTI1MTgzfQ.n66iwGNBKg1roa8K0va7Y7Ba4-eq2pRts-B2b37JJ9c"
           }
         }
         )

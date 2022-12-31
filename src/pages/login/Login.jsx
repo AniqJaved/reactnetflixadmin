@@ -8,8 +8,7 @@ export default function Login() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const {isFetching, dispatch} = useContext(AuthContext);
-
+  const {isFetching, dispatch} = useContext(AuthContext);  //dispatch is just like a function which will be updating the isFetching variable, just as in case of useState we have a function setPassword.
   const handleLogin = (e) => {
     e.preventDefault();
     login({email,password}, dispatch);
