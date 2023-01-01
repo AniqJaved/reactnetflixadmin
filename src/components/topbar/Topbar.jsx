@@ -3,8 +3,8 @@ import { NotificationsNone, Language, Settings } from "@material-ui/icons";
 import {React, useState, useContext} from 'react'
 import { AuthContext } from '../../context/authContext/AuthContext';
 import { logoutUser } from '../../context/authContext/apiCalls';
+import { Link } from "react-router-dom";
 
-  
 export default function Topbar() {
 
   const {isFetching, dispatch} = useContext(AuthContext);  //dispatch is just like a function which will be updating the isFetching variable, just as in case of useState we have a function setPassword.
@@ -22,13 +22,14 @@ export default function Topbar() {
         </div>
         <div className="topRight">
           <div className="topbarIconContainer">
-          <button 
-          className='loginButton' 
-          onClick={handleLogout} 
-          // disabled={isFetching}
-        >
-          Logout
-        </button>
+            <Link to="/login" className="link">
+              <button 
+              className='loginButton' 
+              onClick={handleLogout} 
+              >
+                Logout
+              </button>
+            </Link>
           </div>
           <div className="topbarIconContainer">
             <NotificationsNone />
