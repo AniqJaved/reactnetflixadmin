@@ -13,6 +13,6 @@ export const login = async (user, dispatch) => {
     }
 }
 
-// export const logoutUser = async (dispatch) => {
-//     dispatch(logout());   
-// }
+export const logoutUser = async (dispatch) => {
+    dispatch(logout());   
+}
